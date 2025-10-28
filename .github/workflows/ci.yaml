@@ -1,0 +1,31 @@
+name: CI for Checkstyle and Test Coverage
+
+on:
+  pull_request:
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Checkstyle
+        run: dotnet format --verify-no-changes
+
+      - name: Restore dependencies
+        run: dotnet restore StarshipsGame.sln
+
+      - name: Build Project
+        run: dotnet build StarshipsGame.sln --configuration Release
+
+      
