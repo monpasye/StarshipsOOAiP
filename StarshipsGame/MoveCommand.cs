@@ -1,4 +1,4 @@
-namespace StarshipGame;
+namespace StarshipsGame;
 public class MoveCommand : ICommand
 {
     private IMovable _Obj;

@@ -1,5 +1,5 @@
 using Moq;
-namespace StarshipGame.Test;
+namespace StarshipsGame.Test;
 
 public class MoveCommandTest
 {

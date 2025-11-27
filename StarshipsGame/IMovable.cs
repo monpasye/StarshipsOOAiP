@@ -1,4 +1,4 @@
-namespace StarshipGame;
+namespace StarshipsGame;
 
 public interface IMovable
 {
