@@ -1,5 +1,5 @@
 using Hwdtech;
-namespace StarshipGame;
+namespace StarshipsGame;
 
 public class RegisterIoCDependencyMoveCommand : ICommand
 {

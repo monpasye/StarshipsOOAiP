@@ -3,7 +3,7 @@ using Xunit;
 using Hwdtech;
 using Hwdtech.Ioc;
 
-namespace StarshipGame.Tests
+namespace StarshipsGame.Tests
 {
     public class RegisterIoCDependencyMoveCommandTests
     {
