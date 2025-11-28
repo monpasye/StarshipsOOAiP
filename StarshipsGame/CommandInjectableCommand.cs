@@ -2,7 +2,7 @@ namespace StarshipsGame
 {
     public class CommandInjectableCommand : ICommand, ICommandInjectable
     {
-        private ICommand _command;
+        private ICommand? _command;
 
         public void Inject(ICommand command)
         {
@@ -11,7 +11,10 @@ namespace StarshipsGame
 
         public void Execute()
         {
-            _command?.Execute();
+            if (_command == null)
+                throw new InvalidOperationException("Command not injected");
+
+            _command.Execute();
         }
     }
 }
